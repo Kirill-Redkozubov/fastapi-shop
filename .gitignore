@@ -1,0 +1,70 @@
+# ==============================================================================
+# PYTHON / FASTAPI CONFIGURATION
+# ==============================================================================
+# Виртуальные окружения (Virtual Environments)
+.venv/
+venv/
+ENV/
+env/
+
+# Кэш Python и байт-код
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Базы данных (Локальные файлы SQLite)
+*.db
+*.sqlite3
+
+# Переменные окружения и секреты (Файлы конфигурации)
+.env
+.env.*
+!.env.example
+
+# ==============================================================================
+# JAVASCRIPT / REACT CONFIGURATION
+# ==============================================================================
+# Зависимости Node.js
+**/node_modules/
+.pnpm-store/
+
+# Результаты сборки (Production builds)
+**/dist/
+**/build/
+**/out/
+
+# Кэш инструментов сборки (Vite, Next, Turbo и др.)
+.eslintcache
+.parcel-cache
+.turbo/
+.vercel/
+*.tsbuildinfo
+
+# Логи серверов и ошибок
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==============================================================================
+# SYSTEM & EDITORS CONFIGURATION
+# ==============================================================================
+# Операционная система
+.DS_Store
+Thumbs.db
+db.shm
+db.wal
+
+# Настройки сред разработки (IDE)
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
