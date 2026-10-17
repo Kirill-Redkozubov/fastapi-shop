@@ -14,7 +14,7 @@ class CartService:
             raise HTTPException(status_code=404, detail=f'Product with product_id: {item.product_id} not found')
 
         if item.product_id in cart_data:
-            cart_data[item.product_id] += item.quantity
+            cart_data[item.product_id] += item.quantity 
 
         else:
             cart_data[item.product_id] = item.quantity

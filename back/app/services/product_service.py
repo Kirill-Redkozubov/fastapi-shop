@@ -6,7 +6,7 @@ from ..schemas.product import ProductResponse, ProductCreate, ProductListRespons
 from fastapi import HTTPException, status
 
 
-class CategoryService:
+class ProductService:
     def __init__(self, db: Session):
         self.product_repository = ProductRepository(db)
 
@@ -15,7 +15,7 @@ class CategoryService:
         products_response = [ProductResponse.model_validate(prod) for prod in products]
         return ProductListResponse(products=products_response, total=len(products_response))
 
-    def get_category_by_id(self, product_id: int) -> ProductResponse:
+    def get_product_by_id(self, product_id: int) -> ProductResponse:
         product = self.product_repository.get_by_id(product_id)
         if not product:
             raise HTTPException(status_code=404, detail=f'category with product_id: {product_id} not found')
